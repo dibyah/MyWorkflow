@@ -49,4 +49,4 @@ jobs:
 workflows:
  build_and_test:
    jobs:
-     - scan_check
+     - example_matrix
