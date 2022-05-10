@@ -11,7 +11,10 @@ env :
   AUTH_URL : "https://zscaler-poc.us.auth0.com"
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ macos-latest, ubuntu-latest, windows-latest ]
     steps:
       - uses: actions/checkout@v2
       - uses : ZscalerCWP/Zscaler-IaC-Action@v0.3.0
