@@ -8,7 +8,7 @@ on:
       - 'main'
 env :
   API_URL : "https://main.dev.api.zscwp.io"
-  AUTH_URL : "https://main.dev-auth.zscwp.io"
+  AUTH_URL : "https://zscaler-poc.us.auth0.com"
 jobs:
   test:
     runs-on: ubuntu-latest
