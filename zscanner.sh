@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "token started"
-abc=$(curl --location --request POST 'https://zscaler-poc.us.auth0.com/oauth/token' --header 'Content-Type: application/json' --data-raw '{ "audience" : "https://api.zscwp.io/iac", "grant_type" : "client_credentials", "client_id" : "rB7KjO6hjAM5NqCir0ii0A8USPelGmiz", "client_secret" : "FvnQ6cvOVPO7Y7x3Nu2MBzzuWv1uGi9KwX7yEotnb6WQIooBmaMzzN9jKSJQNPj1"}')
+abc=$(curl --location --request POST 'https://zscaler-poc.us.auth0.com/oauth/token' --header 'Content-Type: application/json' --data-raw '{ "audience" : "https://api.zscwp.io/iac", "grant_type" : "client_credentials", "client_id" : "FNfqUXnMz2G1NpOegRfq4ErrqeW9uoRO", "client_secret" : "z69wXARMKZ1tQNZMkLCSWn6E2iglDQrMl7UF1hMhrlvZG-FrsaXkq7c9Aha_hjEB"}')
 echo $abc
 echo "token call done"
 regex_hint=access_token
