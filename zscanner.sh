@@ -7,7 +7,7 @@ regex_hint=access_token
 [[ $abc =~ $regex_hint\":\"(.+)\",\"expires_in\" ]]
 token=${BASH_REMATCH[1]}
 echo $token
-$(curl --location --request GET 'https://main.dev.api.zscwp.io/iac/onboarding/v1/cli/download?version=6b9e229&platform=Linux&arch=x86_64' \
+$(curl --location --request GET 'https://main.dev.api.zscwp.io/iac/onboarding/v1/cli/download?version=6b9e229&platform=Darwin&arch=x86_64' \
 --header "Authorization: Bearer $token" \
 --header 'Content-Type: application/json' \
 --data-raw '{
