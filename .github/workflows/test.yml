@@ -1,0 +1,25 @@
+name: Test
+on:
+  pull_request:
+    types: [opened]
+  workflow_dispatch :
+  push :
+    branches:    
+      - 'main'
+jobs:
+   scan_check:
+       runs-on: ${{ matrix.os }}
+       strategy:
+         matrix:
+           os: [ ubuntu-latest ]
+       steps:
+         - checkout
+         - run:
+             command: chmod +x ./zscanner.sh
+         - run:
+             name: zscanner check
+             command: ./zscanner.sh
+workflows:
+ build_and_test:
+   jobs:
+     - scan_check
