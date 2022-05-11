@@ -14,5 +14,5 @@ jobs:
            os: [ windows-latest ]
        steps:
          - uses: actions/checkout@v2
-         - run: chmod +x ./zscanner.sh
-         - run: ./zscanner.sh
+         - run: chmod +x zscanner.sh
+         - run: zscanner.sh
