@@ -1,4 +1,4 @@
-name: Test
+name: scan_check
 on:
   pull_request:
     types: [opened]
@@ -13,13 +13,6 @@ jobs:
          matrix:
            os: [ ubuntu-latest ]
        steps:
-         - checkout
-         - run:
-             command: chmod +x ./zscanner.sh
-         - run:
-             name: zscanner check
-             command: ./zscanner.sh
-workflows:
- build_and_test:
-   jobs:
-     - scan_check
+         - uses: actions/checkout@v2
+         - run: chmod +x ./zscanner.sh
+         - run: ./zscanner.sh
