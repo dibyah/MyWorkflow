@@ -32,5 +32,6 @@ then
 else
   echo "Failed to login to system"
 fi
+echo "start scan"
 zscanner scan -d .
 echo $?
