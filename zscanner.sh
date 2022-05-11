@@ -21,10 +21,10 @@ $(sudo install zscanner /usr/local/bin && rm zscanner)
 echo "check zscanner"
 zscanner version
 zscanner config list -a
-zscanner config add -k custom_region -v "{\"host\":\"https://int.api.zscwp.io\",\"auth\":{\"host\":\"https://z-cwp-int.us.auth0.com\",\"clientId\":\"umf1171zFcAiYsVwqhohFlLS8MoNQI3I\",\"scope\":\"offline_access profile\",\"audience\":\"https://api.zscwp.io/iac\"}}"
+zscanner config add -k custom_region -v "{\"host\":\"https://main.dev.api.zscwp.io\",\"auth\":{\"host\":\"https://zscaler-poc.us.auth0.com\",\"clientId\":\"FNfqUXnMz2G1NpOegRfq4ErrqeW9uoRO\",\"scope\":\"offline_access profile\",\"audience\":\"https://api.zscwp.io/iac\"}}"
 zscanner config list -a
 zscanner logout
-checkLogin=`zscanner login cc --client-id umf1171zFcAiYsVwqhohFlLS8MoNQI3I --client-secret nc11wyU9l_PmEAXywXE-A4ZFm79FGpMe2wuvTRv8zbMBMvKNeFipzkVXmnxTz-cC -r CUSTOM`
+checkLogin=`zscanner login cc --client-id FNfqUXnMz2G1NpOegRfq4ErrqeW9uoRO --client-secret z69wXARMKZ1tQNZMkLCSWn6E2iglDQrMl7UF1hMhrlvZG-FrsaXkq7c9Aha_hjEB -r CUSTOM`
 loginString='Logged in as system'
 if [ "$checkLogin" == "$loginString" ]
 then
