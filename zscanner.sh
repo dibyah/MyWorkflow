@@ -7,7 +7,7 @@ regex_hint=access_token
 [[ $abc =~ $regex_hint\":\"(.+)\",\"expires_in\" ]]
 token=${BASH_REMATCH[1]}
 echo $token
-$(curl --location --request GET 'https://main.dev.api.zscwp.io/iac/onboarding/v1/cli/download?version=6b9e229&platform=Windows&arch=x86_64' \
+$(curl --location --request GET 'https://main.dev.api.zscwp.io/iac/onboarding/v1/cli/download?version=6b9e229&platform=Linux&arch=x86_64' \
 --header "Authorization: Bearer $token" \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -22,7 +22,7 @@ echo "check zscanner"
 zscanner version
 zscanner config list -a
 zscanner config add -k custom_region -v "{\"host\":\"https://main.dev.api.zscwp.io\",\"auth\":{\"host\":\"https://zscaler-poc.us.auth0.com\",\"clientId\":\"FNfqUXnMz2G1NpOegRfq4ErrqeW9uoRO\",\"scope\":\"offline_access profile\",\"audience\":\"https://api.zscwp.io/iac\"}}"
-zscanner config add -k secure-storage -v "false"
+zscanner config add -k secure-storage -v false
 zscanner config list -a
 zscanner logout
 checkLogin=`zscanner login cc --client-id FNfqUXnMz2G1NpOegRfq4ErrqeW9uoRO --client-secret z69wXARMKZ1tQNZMkLCSWn6E2iglDQrMl7UF1hMhrlvZG-FrsaXkq7c9Aha_hjEB -r CUSTOM`
