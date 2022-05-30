@@ -8,7 +8,7 @@ on:
       - 'main'
 env :
   API_URL : "https://int.api.zscwp.io"
-  AUTH_URL : "https://int-auth.zscwp.io"
+  AUTH_URL : "https://z-cwp-int.us.auth0.com"
 jobs:
   test:
     runs-on: ${{ matrix.os }}
