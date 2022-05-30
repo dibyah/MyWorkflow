@@ -1,4 +1,3 @@
-
 resource "azurerm_managed_disk" "my-managed-disk" {
   create_option        = "Empty"
   location             = "California"
